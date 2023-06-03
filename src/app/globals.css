@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Aoboshi+One&family=Open+Sans:wght@400;500;600;700&family=Paytone+One&family=Roboto:wght@400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -17,11 +20,75 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: #000;
+  background-color: #FFFDFE;
+
+}
+
+.primary_font {
+  font-family: 'Aoboshi One', serif;
+  font-weight: 500;
+  letter-spacing: 0.09rem;
+}
+
+.secondary_font {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+
+.degree_font {
+  font-family: 'Paytone One', sans-serif;
+
+}
+
+.img_size {
+  width: 70px;
+  height: 70px;
+}
+
+.clear-sky {
+  background: linear-gradient(69.35deg, rgba(0, 0, 0, .4)0%, rgba(0, 0, 0, .4)99.45%), linear-gradient(0deg, rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url('/images/clear.jpg') no-repeat 10% -130%;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+.rainy-day {
+  background: linear-gradient(69.35deg, rgba(0, 0, 0, .4)0%, rgba(0, 0, 0, .4)99.45%), linear-gradient(0deg, rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url('/images/rain.jpg') no-repeat 10% -130%;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+
+.Morning {
+  background: linear-gradient(69.35deg, rgba(0, 0, 0, .4)0%, rgba(0, 0, 0, .4)99.45%), linear-gradient(0deg, rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url('/images/early.jpg') no-repeat 10% -130%;
+  width: 100%;
+  height: 25vh;
+  background-position: center;
+  background-size: cover;
+}
+
+.Afternoon {
+  background: linear-gradient(69.35deg, rgba(0, 0, 0, .4)0%, rgba(0, 0, 0, .4)99.45%), linear-gradient(0deg, rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url('/images/clear.jpg') no-repeat 10% -130%;
+  width: 100%;
+  height: 25vh;
+  background-position: center;
+  background-size: cover;
+}
+
+.Evening {
+  background: linear-gradient(69.35deg, rgba(0, 0, 0, .4)0%, rgba(0, 0, 0, .4)99.45%), linear-gradient(0deg, rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url('/images/evening.jpg') no-repeat 10% -130%;
+  width: 100%;
+  height: 25vh;
+  background-position: center;
+  background-size: cover;
+}
+
+.Night {
+  background: linear-gradient(69.35deg, rgba(0, 0, 0, .4)0%, rgba(0, 0, 0, .4)99.45%), linear-gradient(0deg, rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url('/images/night.jpg') no-repeat 10% -130%;
+  width: 100%;
+  height: 25vh;
+  background-position: center;
+  background-size: cover;
 }
