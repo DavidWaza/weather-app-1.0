@@ -1,6 +1,6 @@
 "use client";
-import Image from "next/image";
 import { useState, useEffect } from "react";
+require('dotenv').config();
 
 const daysOfWeek = [
   "Sunday",
@@ -25,8 +25,8 @@ const monthsOfYear = [
   "November",
   "December",
 ];
-const currentTimestamp = Date.now();
 const currentHour = new Date().getHours();
+const currentTimestamp = Date.now();
 
 const currentDate = new Date(currentTimestamp);
 
@@ -45,7 +45,7 @@ export default function Home() {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "https://api.weatherapi.com/v1/current.json?key=a9140ce4ab7b4471854195258230206&q=Abuja&aqi=no"
+          `https://api.weatherapi.com/v1/current.json?key=a9140ce4ab7b4471854195258230206&q=Abuja&aqi=no`
         );
         const json = await response.json();
         setData(json);
@@ -109,7 +109,7 @@ export default function Home() {
               </div>
             </div>
           ) : (
-            <p>Data Loading ....</p>
+            <p>Data Loading ...</p>
           )}
         </div>
       </article>
