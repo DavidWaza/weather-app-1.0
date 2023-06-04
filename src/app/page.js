@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-require('dotenv').config();
+require("dotenv").config();
 
 const daysOfWeek = [
   "Sunday",
@@ -31,7 +31,7 @@ const currentTimestamp = Date.now();
 const currentDate = new Date(currentTimestamp);
 
 const year = currentDate.getFullYear();
-const days = String(currentDate.getDate()).padStart(2, '0');
+const days = String(currentDate.getDate()).padStart(2, "0");
 const hours = currentDate.getHours();
 const minutes = currentDate.getMinutes();
 const dayOfWeek = daysOfWeek[currentDate.getDay()];
@@ -75,6 +75,15 @@ export default function Home() {
                 data.current.temp_c > 23 ? "clear-sky" : "rainy-day"
               }`}
             >
+              <div className="text-center text-white">
+                <p className="py-2 primary_font text-[1.5rem]">
+                  {data.location.name}
+                </p>
+                <p className="py-2 primary_font text-[1.5rem]">
+                  {data.location.region}
+                </p>
+              </div>
+
               <div
                 className={`flex justify-between text-white primary_font p-24 ${hourStatement}`}
               >
@@ -85,12 +94,6 @@ export default function Home() {
               <div className="text-center text-[#fff]">
                 {/* <p className=" text-center">Today</p> */}
                 <>
-                  <p className="py-2 primary_font text-[1.5rem]">
-                    {data.location.name}
-                  </p>
-                  <p className="py-2 primary_font text-[1.5rem]">
-                    {data.location.region}
-                  </p>
                   <p className="text-[5rem] degree_font text-[#D35400]">{`${data.current.temp_c}°`}</p>
                   <p className="text-[1rem] primary_font">
                     feels like: {` ${data.current.feelslike_c}°`}
