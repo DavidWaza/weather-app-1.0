@@ -31,9 +31,11 @@ const currentHour = new Date().getHours();
 const currentDate = new Date(currentTimestamp);
 
 const year = currentDate.getFullYear();
+const days = String(currentDate.getDate()).padStart(2, '0');
 const hours = currentDate.getHours();
 const minutes = currentDate.getMinutes();
 const dayOfWeek = daysOfWeek[currentDate.getDay()];
+// const months = String(currentDate.getMonth()).padStart(2, '0')
 const monthOfYear = monthsOfYear[currentDate.getMonth()];
 
 export default function Home() {
@@ -77,7 +79,7 @@ export default function Home() {
                 className={`flex justify-between text-white primary_font p-24 ${hourStatement}`}
               >
                 <p>{`${hours}:${minutes} ${hours < 12 ? "AM" : "PM"}`}</p>
-                <p>{`${dayOfWeek} - ${monthOfYear} - ${year}`}</p>
+                <p>{`${dayOfWeek} ${days} - ${monthOfYear} - ${year}`}</p>
               </div>
               <div></div>
               <div className="text-center text-[#fff]">
