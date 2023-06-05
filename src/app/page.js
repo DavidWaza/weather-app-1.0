@@ -1,6 +1,10 @@
 "use client";
 import { useState, useEffect } from "react";
 require("dotenv").config();
+import London from "./London";
+import Paris from "./Paris";
+import China from "./China";
+
 
 const daysOfWeek = [
   "Sunday",
@@ -110,6 +114,12 @@ export default function Home() {
                   </p>
                 </>
               </div>
+              <div className="text-white flex justify-between">
+                <London />
+                <Paris />
+                <China />
+              </div>
+              {/* <p className='text-white'>hello</p> */}
             </div>
           ) : (
             <p>Data Loading ...</p>

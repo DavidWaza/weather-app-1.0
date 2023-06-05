@@ -45,6 +45,10 @@ body {
   width: 70px;
   height: 70px;
 }
+.otherImgSize{
+  width: 40px;
+  height: 40px;
+}
 
 .clear-sky {
   background: linear-gradient(69.35deg, rgba(0, 0, 0, .4)0%, rgba(0, 0, 0, .4)99.45%), linear-gradient(0deg, rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url('/images/clear.jpg') no-repeat 10% -130%;
