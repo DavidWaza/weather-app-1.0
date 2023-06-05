@@ -5,7 +5,6 @@ import London from "./London";
 import Paris from "./Paris";
 import China from "./China";
 
-
 const daysOfWeek = [
   "Sunday",
   "Monday",
@@ -75,7 +74,7 @@ export default function Home() {
         <div>
           {data ? (
             <div
-              className={`h-[100vh] w-full px-[20%] p-24 ${
+              className={`h-[100%] w-full px-[20%] p-24 ${
                 data.current.temp_c > 23 ? "clear-sky" : "rainy-day"
               }`}
             >
@@ -89,14 +88,13 @@ export default function Home() {
               </div>
 
               <div
-                className={`flex justify-between text-white primary_font p-24 ${hourStatement}`}
+                className={`flex md:justify-between text-white primary_font md:p-24 text-[0.77rem] md:text-[1rem] flex-wrap flex-col text-center py-12 ${hourStatement}`}
               >
                 <p>{`${hours}:${minutes} ${hours < 12 ? "AM" : "PM"}`}</p>
                 <p>{`${dayOfWeek} ${days} - ${monthOfYear} - ${year}`}</p>
               </div>
               <div></div>
               <div className="text-center text-[#fff]">
-                {/* <p className=" text-center">Today</p> */}
                 <>
                   <p className="text-[5rem] degree_font text-[#D35400]">{`${data.current.temp_c}°`}</p>
                   <p className="text-[1rem] primary_font">
@@ -114,12 +112,11 @@ export default function Home() {
                   </p>
                 </>
               </div>
-              <div className="text-white flex justify-between">
+              <div className="text-white flex flex-row flex-wrap md:justify-between justify-center w-full">
                 <London />
                 <Paris />
                 <China />
               </div>
-              {/* <p className='text-white'>hello</p> */}
             </div>
           ) : (
             <p>Data Loading ...</p>
